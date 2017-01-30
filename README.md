@@ -1,8 +1,3 @@
-# Shoe Store
-
-Online Shopping Shoe Store
-This project is built only for a class project by Patrick Abou Sleiman. 
-
 # About the project
 
 This website is a simpe design for a shoe store that allow clients to make an order online. 
