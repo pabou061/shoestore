@@ -1,29 +1,24 @@
-# About the project
+# README
 
-This website is a simpe design for a shoe store that allow clients to make an order online. 
-The website is composed of the following: 
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Home page: a simple description of the company 
+Things you may want to cover:
 
-Location: the contact information and an interactive google map to locate the store 
+* Ruby version
 
-Shop: Composed of men and women shoes (for now, might add more categories if i have time). each section will have differnet types of shoes. Each type of shoe will get all the matching shoes from the database and display them. When clicked on a show, you will recieve all the information and will have the option to add it to the cart. 
+* System dependencies
 
-Cart: View the cart, option to delete items and proceed to checkout
+* Configuration
 
-Will not be implemented: 
+* Database creation
 
-Transactions at the end of the chekout
+* Database initialization
 
-Might be implemented (Depends on time and progress): 
+* How to run the test suite
 
-Newsletter + subscription 
+* Services (job queues, cache servers, search engines, etc.)
 
-Track your order
+* Deployment instructions
 
-# Technology
-
-The application will be built using HTML, JavaScript, CSS, SASS, Ruby and Sinatra.
-The application will be linked to a databse using PostgreSQL
-
-Disclaimer: All the code here is used only for class material and will not be used for any other project.
+* ...
