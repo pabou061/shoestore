@@ -60,13 +60,13 @@ section {
     background: none!important;
 }
 
-.circle_green {
+.circle {
     width: 1%;
     padding: 10px 11px;
     margin: 0 auto;
     border: 2px solid #a1a1a1;
     border-radius: 25px;
-    background-color: green;
+    
 }
 
 .square-size {

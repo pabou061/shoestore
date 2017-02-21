@@ -64,3 +64,8 @@ $(this).find("div.over").css("height","0px")
             });
         });
 
+
+function changecolor(color) {
+   this.css("background-color", color);
+};
+

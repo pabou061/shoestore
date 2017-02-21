@@ -14,7 +14,7 @@
             <% @shoes.each do |shoe|%>
             <div class='col-sm-3 '>
 
-              <%= link_to shoe_path(shoe.sid) do %>
+              <%= link_to shoe_path(shoe) do %>
                <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">
                   
                   <%= image_tag('men.jpg') %>

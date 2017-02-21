@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 	get "/shop/women" => "pages#women"
 
 	get	"/cart" => "pages#cart"
+	get "/signup" => "pages#signup"
+	get "/login" => "pages#login"
 
 
 end
