@@ -1,0 +1,47 @@
+ <section class='shop'>
+        <div class="container">
+            <div class="col-sm-12">
+                <div class="row shoe-text-center">
+
+                    <div class=' shoe-user-title'>
+                        <h3 class='shoe-text-center shoe-text-uppercase'>Men Shoes</h3>
+                        <hr>
+                    </div>
+                    <p>
+                        add a quote here
+                    </p>
+                </div>
+
+                <div class="row">
+
+
+<% @shoes.each do |shoe|%>
+
+ <div class='col-sm-3 '>
+    <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">
+       <%= image_tag('men.jpg') %>
+            <div class="info">
+                <h4><%= shoe.name%></h4>
+                                <hr>
+                                <a href="info.html">View info</a>
+                            </div>
+                        </div>
+                    </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+                    
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
