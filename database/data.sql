@@ -128,11 +128,11 @@ VALUES (16, 'Cherryhill', 80, 'w/l/cherryhill', 6);
 
 INSERT INTO shoestore.shoes(
             sid, name, price, image, catid)
-VALUES (17, 'Auchi', 100, 'w/hh/auchi', 6);
+VALUES (17, 'Auchi', 15, 'w/l/auchi', 6);
 
 INSERT INTO shoestore.shoes(
             sid, name, price, image, catid)
-VALUES (18, 'Clarencea', 90, 'w/hh/clarencea', 6);
+VALUES (18, 'Clarencea', 90, 'w/l/clarencea', 6);
     
 INSERT INTO shoestore.availableshoes(
             sizeid, colorid, sid, quantity)
