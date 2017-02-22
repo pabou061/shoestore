@@ -13,6 +13,8 @@ gem 'pg'
 
 gem 'sqlite3'
 
+gem 'rspec'
+
 # use bcrypt and devise for user authentication
 gem 'bcrypt', platforms: :ruby
 gem 'devise'
