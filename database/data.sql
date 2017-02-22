@@ -68,7 +68,7 @@ INSERT INTO shoestore.shoes(
 VALUES (2, 'Ceridia', 110, 'm/s/ceridia', 1);
 
 INSERT INTO shoestore.shoes(
-	sid, name, prices, image, catid)
+	sid, name, price, image, catid)
 VALUES (3, 'Aauwen', 75, 'm/s/aauwen', 1);
 
 INSERT INTO shoestore.shoes(
@@ -134,22 +134,43 @@ INSERT INTO shoestore.shoes(
             sid, name, price, image, catid)
 VALUES (18, 'Clarencea', 90, 'w/l/clarencea', 6);
     
-INSERT INTO shoestore.availableshoes(
-            sizeid, colorid, sid, quantity)
-VALUES (1, 1, 1, 10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 3,10);
 
-INSERT INTO shoestore.availableshoes(
-            sizeid, colorid, sid, quantity)
-VALUES (1, 2, 1, 10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 2, 10);
 
-INSERT INTO shoestore.availableshoes(
-            sizeid, colorid, sid, quantity)
-VALUES (2, 3, 1, 10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (2, 1, 10);
 
-INSERT INTO shoestore.availableshoes(
-            sizeid, colorid, sid, quantity)
-VALUES (2, 2, 2, 10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (2, 2,  10);
 
-INSERT INTO shoestore.availableshoes(
-            sizeid, colorid, sid, quantity)
-VALUES (1, 1, 2, 10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 4,  10);
+
+INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 2);
+
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 1);
+
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 3);
+
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 4);
+
+INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 5);
+

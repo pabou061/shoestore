@@ -5,7 +5,7 @@ class ShoesController < ApplicationController
 		@shoes = 
 		Shoe.find_by_sql(
 			"SELECT s.*
-			FROM shoestore.shoes s, shoestore.availableShoes a
+			FROM shoestore.shoes s, shoestore.availablesizes a
 			Where s.sid=a.sid and quantity>0
 			group by s.sid")
 
@@ -17,10 +17,14 @@ class ShoesController < ApplicationController
 		@shoe = Shoe.find params[:id]
 
 		@available = 
-		Available.find_by_sql ["SELECT c.color, s.size,a.quantity
-			FROM shoestore.availableshoes a,shoestore.sizes s, shoestore.colors c
-			Where a.sizeid = s.sizeid and a.colorid=c.colorid 
-			and a.sid= ? ", @shoe.sid]
+		Availablesize.find_by_sql ["SELECT s.size,a.quantity
+			FROM shoestore.availablesizes a,shoestore.sizes s
+			Where a.sizeid = s.sizeid and a.sid= ? ", @shoe.sid]
+
+		@availablecolor = 
+		Availablecolor.find_by_sql ["SELECT c.color
+			FROM shoestore.availablecolors a, shoestore.colors c
+			Where a.colorid = c.colorid and a.sid= ? ", @shoe.sid]
 
 
 		@shoe = Shoe.find params[:id]
