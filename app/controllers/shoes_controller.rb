@@ -1,13 +1,19 @@
 class ShoesController < ApplicationController
 
-	def index
 
+
+
+
+
+
+	def index
+		@category= params[:category_id]
+		@subcategory= params[:subcategory_id]
 		@shoes = 
-		Shoe.find_by_sql(
-			"SELECT s.*
+		Shoe.find_by_sql ["SELECT s.*
 			FROM shoestore.shoes s, shoestore.availablesizes a
-			Where s.sid=a.sid and quantity>0
-			group by s.sid")
+			Where s.sid=a.sid and quantity>0 and s.catid=?
+			group by s.sid", @subcategory]
 
 		render("index")
 
