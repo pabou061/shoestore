@@ -14,7 +14,7 @@
 
                     <div class="col-sm-6">
                         <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">
-                            <%= image_tag('men.jpg') %>
+                            <%= image_tag(@shoe.image) %>
                         </div>
 
                     </div>
@@ -26,7 +26,7 @@
                             <p>colors</p>
 
                               <% @availablecolor.each do |a|%>
-                            <button  class="circle" id="circle" onload=changecolor('<%= a.color %>')> </button>
+                            <button  class="circle circle-color-select" data-bgcolor="<%= a.color %>" id="circle"> </button>
                             <% end %>
                         </div>
 

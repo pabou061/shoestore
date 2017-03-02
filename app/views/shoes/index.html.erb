@@ -14,10 +14,10 @@
             <% @shoes.each do |shoe|%>
             <div class='col-sm-3 '>
 
-              <%= link_to shoe_path(shoe) do %>
+              <%= link_to "/categories/"+@category+"/subcategories/"+@subcategory+"/shoes/"+shoe.sid.to_s do %>
                <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">
                   
-                  <%= image_tag('men.jpg') %>
+                  <%= image_tag(shoe.image+".jpg") %>
                   <div class="info">
                      <h4><%= shoe.name%></h4>
                      <span><%= shoe.price%>$</span>
