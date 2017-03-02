@@ -1,26 +1,26 @@
 INSERT INTO shoestore.category(
 	catid, nom, ismen, image)
-VALUES (1, 'sneakers', true, 'cat/sneakers.jpg');
+VALUES (1, 'Sneakers', true, 'cat/s.jpg');
 
 INSERT INTO shoestore.category(
 	catid, nom, ismen, image)
-VALUES (2, 'dress shoes', true, 'cat/dress_shoes.jpg');
+VALUES (2, 'Dress Shoes', true, 'cat/ds.jpg');
 
 INSERT INTO shoestore.category(
 	catid, nom, ismen, image)
-VALUES (3, 'dress boots', true, 'cat/dress_boots.jpg');
+VALUES (3, 'Dress Boots', true, 'cat/db.jpg');
 
 INSERT INTO shoestore.category(
 	catid, nom, ismen, image)
-VALUES (4, 'heels', false, 'cat/heels.jpg');
+VALUES (4, 'Heels', false, 'cat/h.jpg');
 
 INSERT INTO shoestore.category(
 	catid, nom, ismen, image)
-VALUES (5, 'high heels', false, 'cat/high_heels.jpg');
+VALUES (5, 'High Heels', false, 'cat/hh.jpg');
 
 INSERT INTO shoestore.category(
 	catid, nom, ismen, image)
-VALUES (6, 'loafers', false, 'cat/loafers.jpg');
+VALUES (6, 'Loafers', false, 'cat/l.jpg');
 
 INSERT INTO shoestore.colors(
 	colorid, color)
