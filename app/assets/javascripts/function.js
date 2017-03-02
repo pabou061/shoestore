@@ -65,7 +65,13 @@ $(this).find("div.over").css("height","0px")
         });
 
 
-function changecolor(color) {
-   this.css("background-color", color);
+function changecolor(self) {
+    console.log(self);
+    $(self).css("background-color", self.dataset.bgcolor);
 };
 
+$(document).ready(function(){    
+    $(".circle-color-select").each(function(){
+        changecolor(this);
+    });
+});
