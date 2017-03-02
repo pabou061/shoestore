@@ -3,13 +3,7 @@
   <head>
    
     <%= stylesheet_link_tag 'bootstrap.min.css', 'style.css','font-awesome-4.1.0/css/font-awesome.min.css'%>
-   
-    <%= javascript_include_tag 'function.js', 'jquery.js','bootstrap.js','bootstrap.min.js' %>
-    <%= javascript_include_tag 'jquery-1.10.2.min.js' %>
-    <%= javascript_include_tag 'scrollReveal.js' %>
-    <%= javascript_include_tag 'owl.carousel.min.js' %>
-
-    
+       
    
     <%= csrf_meta_tags %>
     
@@ -37,7 +31,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/home">Home</a></li>
                     <li><a href="/location">Location</a></li>
-                    <li><a href="/shop">Shop</a></li>
+                    <li>  <%= link_to "shop", categories_path %></li>
                     <li><a href="/cart">Cart</a></li>
                   
                 </ul>
@@ -70,5 +64,12 @@
                 <p class="pull-left">© Shoe Store All Rights Reserved</p>
             </div>
     </footer>
+
+
+    <%= javascript_include_tag 'jquery.js','bootstrap.js','bootstrap.min.js' %>
+    <%= javascript_include_tag 'jquery-1.10.2.min.js' %>
+    <%= javascript_include_tag 'scrollReveal.js' %>
+    <%= javascript_include_tag 'owl.carousel.min.js' %>
+    <%= javascript_include_tag 'function.js' %>
   </body>
 </html>
