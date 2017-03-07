@@ -6,13 +6,15 @@ CREATE SCHEMA SHOESTORE;
 CREATE DOMAIN SHOESTORE.sexType AS CHAR
 	CHECK (VALUE IN ('M', 'F','U'));
 
-CREATE TABLE IF NOT EXISTS Client ( 
+drop table shoestore.client cascade;
+CREATE TABLE IF NOT EXISTS shoestore.Client ( 
 
 	CID INTEGER NOT NULL,
 	Fname VARCHAR(30) NOT NULL,
 	Lname VARCHAR(30) NOT NULL,
 	Email VARCHAR(30) UNIQUE NOT NULL,
-	Gender SEXTYPE DEFAULT 'U',
+	Password VARCHAR(30) NOT NULL,
+	Gender shoestore.sexType DEFAULT 'U',
 	Dob DATE NOT NULL,
 	PRIMARY KEY (CID)
 );
