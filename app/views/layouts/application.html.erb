@@ -29,10 +29,11 @@
 
             <div class="collapse navbar-collapse menubar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/location">Location</a></li>
+                    <li><%= link_to "Home", home_path %></li>
+                    <li><%= link_to "Location", location_path %></li>
                     <li>  <%= link_to "shop", categories_path %></li>
                     <li><a href="/cart">Cart</a></li>
+                    <li><%= link_to "Login", logins_path %></li>
                   
                 </ul>
             </div>

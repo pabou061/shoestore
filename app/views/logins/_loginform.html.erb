@@ -1,0 +1,14 @@
+<%= form_for @login do |u| %>
+
+	<div>
+		<%= u.label :email %><br />
+		<%= u.email_field :email %>
+	</div>
+
+	<div>
+		<%= u.label :password %> <br />
+		<%= u.password_field :password%>
+	</div>
+
+	<%= u.submit %> 
+<% end %>
