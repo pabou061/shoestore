@@ -14,12 +14,5 @@ class PagesController < ApplicationController
 		render ("shop")
 	end
 
-	def men
-		render ("men")
-	end
-
-	def women
-		render ("women")
-	end
 
 end
