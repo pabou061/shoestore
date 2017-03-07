@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 	get "/home" => "pages#home"
 	get "/location" => "pages#location"
 	get	"/cart" => "pages#cart"
-	get "/signup" => "pages#signup"
+	get "/signup" => "logins#signup"
 	
 	resources :logins, only: [:index] 
 
