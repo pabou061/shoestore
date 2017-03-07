@@ -7,4 +7,9 @@ def index
 	
 end
 
+def signup 
+	@login = Login.new
+	render ("signup")
+end
+
 end
