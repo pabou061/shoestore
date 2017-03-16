@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 	get "/home" => "pages#home"
 	get "/location" => "pages#location"
 	get	"/cart" => "pages#cart"
-	get "/signup" => "logins#signup"
 	
-	resources :logins, only: [:index] 
+	resources :logins, only: [:new, :create, :destroy]
+	resources :signups, only: [:new,:create]
 
 	resources :categories, only: [:show, :index] do
 		resources :subcategories do
