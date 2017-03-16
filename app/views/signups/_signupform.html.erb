@@ -1,0 +1,45 @@
+<%= form_for :login, url: '/signups' do |f| %>
+
+	<div>
+		First Name <br />
+		<%= f.text_field :fname %>
+	</div>
+
+	<div>
+		Last Name<br />
+		<%= f.text_field :lname %>
+	</div>
+
+	<div>
+		Gender<br />
+		
+<%= f.radio_button(:gender, "M") %>
+<%= f.label(:gender_male, "Male") %>
+<%= f.radio_button(:gender, "F") %>
+<%= f.label(:gender_female, "Female") %>
+<%= f.radio_button(:gender, "U") %>
+<%= f.label(:gender_unassigned, "Prefer not to tell") %>
+	</div>
+
+
+
+<div>
+		Date of birth<br />
+		<%= f.date_field(:dob) %>
+	</div>
+	<div>
+		Email<br />
+		<%= f.text_field :email %>
+	</div>
+
+	<div>
+		Password <br />
+		<%= f.password_field :password%>
+	</div>
+	<div>
+		Confirm Password<br />
+		<%= f.password_field :password_confirmation%>
+	</div>
+
+	<%= f.submit "Submit" %> 
+<% end %>
