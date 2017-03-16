@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-   
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
     <%= stylesheet_link_tag 'bootstrap.min.css', 'style.css','font-awesome-4.1.0/css/font-awesome.min.css'%>
        
    
@@ -31,9 +32,15 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><%= link_to "Home", home_path %></li>
                     <li><%= link_to "Location", location_path %></li>
-                    <li>  <%= link_to "shop", categories_path %></li>
+                    <li>  <%= link_to "Shop", categories_path %></li>
                     <li><a href="/cart">Cart</a></li>
-                    <li><%= link_to "Login", logins_path %></li>
+<% if current_user %>
+ <li><%= link_to "Logout" , login_path(session[:user_id]), data: {method: "delete"}%></li>
+<% else %>
+   <li><%= link_to "Login", new_login_path %></li>
+<% end %>
+
+            
                   
                 </ul>
             </div>

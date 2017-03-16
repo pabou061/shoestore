@@ -1,14 +1,14 @@
-<%= form_for @login do |u| %>
+<%= form_tag '/logins' do %>
 
 	<div>
-		<%= u.label :email %><br />
-		<%= u.email_field :email %>
+		<%= label_tag :email %><br />
+		<%= email_field_tag :email %>
 	</div>
 
 	<div>
-		<%= u.label :password %> <br />
-		<%= u.password_field :password%>
+		<%= label_tag :password %> <br />
+		<%= password_field_tag :password%>
 	</div>
 
-	<%= u.submit %> 
+	<%= submit_tag "Submit" %> 
 <% end %>
