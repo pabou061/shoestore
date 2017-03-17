@@ -1,4 +1,9 @@
-<%= form_for :login, url: '/signups' do |f| %>
+<%= form_for @signup do |f| %>
+<div>
+		
+		<%=@message%>
+	</div>
+
 
 	<div>
 		First Name <br />
