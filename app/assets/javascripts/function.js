@@ -1,5 +1,5 @@
 
-function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(45.46792193841881,-75.70054278413085),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(45.46792193841881,-75.70054278413085)});infowindow = new google.maps.InfoWindow({content:'<strong>Motel Ritz</strong><br>137 Boulevard Gréber, Gatineau<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+// function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(45.46792193841881,-75.70054278413085),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(45.46792193841881,-75.70054278413085)});infowindow = new google.maps.InfoWindow({content:'<strong>Motel Ritz</strong><br>137 Boulevard Gréber, Gatineau<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
 
 function overImage(a,b)
 	{
@@ -70,8 +70,26 @@ function changecolor(self) {
     $(self).css("background-color", self.dataset.bgcolor);
 };
 
+
+$(function (){
+    $(".shoesize").on("click",function(){
+        $(".shoequantity").empty();
+    console.log(this.dataset.quantity);
+    var select = $('<select name="cart[quantity]" id="cart_quantity"/>');
+
+    for (var i=0; i <= this.dataset.quantity; i++) { 
+        select.append("<option value="+i+" >"+i+"</option");
+    }
+    select.append("</select>");
+  $(".shoequantity").append(select);
+
+  });
+});
+
 $(document).ready(function(){    
     $(".circle-color-select").each(function(){
         changecolor(this);
     });
+
+
 });
