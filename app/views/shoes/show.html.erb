@@ -11,41 +11,16 @@
                 </div>
 
                 <div class="row">
+                <div class="col-sm-6">
+    <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">
+        <%= image_tag(@shoe.image) %>
+    </div>
 
-                    <div class="col-sm-6">
-                        <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter right and move 40px over 1s">
-                            <%= image_tag(@shoe.image) %>
-                        </div>
+</div>
+<div class="col-sm-6 shoe-text-center">
 
-                    </div>
-                    <div class="col-sm-6 shoe-text-center">
-                        
-                        <p>Price =<%= @shoe.price %>$ </p>
+                    <%= render "shoeform" %>
 
-                        <div class="buttons">
-                            <p>colors</p>
-
-                              <% @availablecolor.each do |a|%>
-                            <button  class="circle circle-color-select" data-bgcolor="<%= a.color %>" id="circle"> </button>
-                            <% end %>
-                        </div>
-
-
-                        <div class="size">
-                            <p>Size</p>
-                            <% @available.each do |a|%>
-                            <button class="square-size"> <%=a.size%> </button>
-                            <p>Quantity:  <%=a.quantity%> </p>
-                            <% end %>
-                           
-                        </div>
-                        <br>
-                      
-                        <br>
-
-                        <button class="add_cart">Add to cart</button>
-                        <button class="add_cart">Buy Now</button>
-                       
                     </div>
 
                 </div>
