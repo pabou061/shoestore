@@ -1,0 +1,47 @@
+<%= form_for @cart do |f|%>
+
+<%= if session[:user_id] then
+f.hidden_field :cid,  :value => session[:user_id]
+else 
+f.hidden_field :cid,  :value => 0
+end %>
+<%= f.hidden_field :sid,  :value => @shoe.sid %>
+<%= f.hidden_field :flag,  :value => 1 %>
+    <p>Price =
+        <%= @shoe.price %>$</p>
+
+    <div class="buttons">
+        <p>colors</p>
+
+        <% @availablecolor.each do |a|%>
+        <%= f.radio_button :colorid, a.colorid%> <%=a.color%>
+            <% end %>
+            
+
+    </div>
+
+    <div class="size">
+        <p>Size</p>
+       <% @available.each do |a|%>
+            <%= f.radio_button :sizeid, a.sizeid, :data => {:quantity => a.quantity}, class: "shoesize" %><%=a.size%>
+            <% end %>
+            <div class="shoequantity">
+            </div>
+           
+
+    </div>
+    <br>
+
+    <br>
+
+   <% if flash[:notice] -%>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end -%>
+<% if flash[:error] -%>
+  <p class="error"><%= flash[:error] %></p>
+<% end -%>
+
+<%= submit_tag "Add to cart", class: "add_cart"%>
+<%= submit_tag "Buy now", class: "add_cart"%>
+
+<% end %>
