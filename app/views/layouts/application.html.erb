@@ -33,10 +33,12 @@
                     <li><%= link_to "Home", home_path %></li>
                     <li><%= link_to "Location", location_path %></li>
                     <li>  <%= link_to "Shop", categories_path %></li>
-                    <li><a href="/cart">Cart</a></li>
+                   
 <% if current_user %>
+ <li><%= link_to "Cart("+ Cart.where(cid: session[:user_id]).count.to_s + ")", carts_path %></li>
  <li><%= link_to "Logout" , login_path(session[:user_id]), data: {method: "delete"}%></li>
 <% else %>
+ <li><a href="/cart">Cart</a></li>
    <li><%= link_to "Login", new_login_path %></li>
 <% end %>
 
