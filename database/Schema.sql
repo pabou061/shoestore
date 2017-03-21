@@ -73,21 +73,24 @@ CREATE TABLE IF NOT EXISTS AvailableColors (
 	FOREIGN KEY (ColorID) REFERENCES Colors(ColorID)
 );
 
+
 CREATE TABLE IF NOT EXISTS Orders ( 
 
 	OID SERIAL ,
-	Hour TIME NOT NULL,
+	Hour TIME default current_time,
 	SID INTEGER NOT NULL,
 	CID INTEGER NOT NULL,
-	quantity INTEGER NOT NULL,
+	quantity INTEGER,
+	glaf integer not null,
 	colorid INTEGER NOT NULL,
-	size integer not null,
-	Dor DATE NOT NULL,
+	sizeid integer not null,
+	Dor timestamp default current_timestamp,
 	PRIMARY KEY (OID),
 	FOREIGN KEY (CID) REFERENCES Client(CID), 
 	FOREIGN KEY (SID) REFERENCES Shoes(SID),
 	FOREIGN KEY (colorid) REFERENCES Colors(colorID),
-	FOREIGN KEY (size) REFERENCES Sizes(sizeID)
+	FOREIGN KEY (sizeid) REFERENCES Sizes(sizeID)
 	
 );
+
 
