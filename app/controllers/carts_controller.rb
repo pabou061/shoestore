@@ -3,7 +3,7 @@ class CartsController < ApplicationController
 
 
 def index
-   @cart = Cart.find_by cid: session[:user_id]
+   @cart = Cart.where(cid: session[:user_id])
 end
 
 
