@@ -664,94 +664,6 @@ input[name="submit"] {
     position: relative;
 }
 
-.shoe-contact label > span,
-input,
-textarea,
-button {
-    box-sizing: border-box;
-}
-
-.shoe-contact label {
-    font-weight: normal;
-    width: 100%;
-    color: #696969;
-    display: inline-block;
-    width: 100%;
-}
-
-.shoe-contact label > span {
-    display: none;
-}
-
-.shoe-contact input,
-textarea,
-button {
-    width: 100%;
-    border: none;
-}
-
-.shoe-contact input[type="text"],
-input[type="email"],
-textarea {
-    margin: 0;
-    outline: none;
-    height: 38px;
-    line-height: 38px;
-    width: 100%;
-    padding: 0 10px;
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-
-.shoe-contact input.invalid,
-textarea.invalid {
-    border-color: #d5144d;
-}
-
-.shoe-contact textarea {
-    height: 4em;
-    width: 100%;
-    resize: none;
-    padding: 0 10px;
-}
-
-.shoe-contact input[type="submit"] {
-    background: #2e2e2e;
-    color: #fff;
-    font-size: 13px;
-    width: auto;
-    margin: 0 auto;
-    margin-top: 20px;
-    text-transform: uppercase;
-    height: 47px;
-    font-weight: bold;
-    line-height: 47px;
-    padding: 0 30px;
-}
-
-.shoe-contact button {
-    background: #2e2e2e;
-    color: #fff;
-    font-size: 13px;
-    width: auto;
-    margin: 0 auto;
-    margin-top: -28px;
-    text-transform: uppercase;
-    height: 47px;
-    font-weight: bold;
-    line-height: 47px;
-    display: inline-block;
-}
-
-.shoe-contact input[type="submit"]:hover,
-button:hover {
-    background: #25a7b4;
-}
-
-.shoe-contact .form-group {
-    width: 100%;
-}
-
 .copyrights {
     background: #5c5656;
     height: 64px;
@@ -853,4 +765,73 @@ padding-top: 50px; //(whatever distance from the top of the page you want)
     height: 90px;
     padding: 5px;
     margin-left: 10px;
+}
+
+
+
+/*FORM*/
+
+.form{
+    width: 340px;
+}
+
+.form label {
+    display: block;
+    padding: 10px 0 10px 0;W
+    display: block;
+    font-size: 14px;
+    float: left;
+    width: 80px;
+    text-align: left;
+    padding: 5px 20px 0 0;
+}
+
+input[type=text], input[type=password], input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid grey;
+    
+}
+input[type=date]{
+    width: 100%;
+    padding: 3px 20px;
+    margin: 8px 0;
+    border: 2px solid grey;
+}
+input[type=submit] {
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 0px auto;
+    display: block;
+    cursor: pointer;
+}
+.form select {
+    color: #000000;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 4px;
+    border-color: grey;
+    background-color: #fff;
+}
+/*CART*/
+
+table, th, td {
+
+ border-collapse: collapse;
+ width: 100%;
+ border: 0px;
+ padding: 15px;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+tr td:last-child{
+    width:1%;
+    white-space:nowrap;
 }
