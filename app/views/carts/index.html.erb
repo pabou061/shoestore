@@ -1,37 +1,49 @@
 <section class='shop'>
-        <div class="container">
-            <div class="col-sm-12">
-                <div class="row shoe-text-center">
+   <div class="container">
+      <div class="col-sm-12">
+         <div class="row shoe-text-center">
+            <div class="shoe-text-title">
+               <h3>Cart</h3>
+            </div>
+         </div>
 
-                    <div class="shoe-text-title">
-                        <h3>Cart</h3>
-                    </div>
+        <% if session[:user_id] %>
 
-                </div>
-                
-                <div class="row">
-                    <div class="col-sm-6">
-                        <p>Style</p>
-                    </div>
-
-                   
-                        <div class="col-sm-3">
-                            <p>Quantity </p>
-                        </div>
-
-                       
-                        <div class="col-sm-3">
-                                <p>Price </p>
-                        </div>
-<hr>
-                </div>
-                <div class="checkout">
-                    <a href="#">Checkout</a>
-                </div>
-                        
-
-                    </div>
-
-                </div>
-
-    </section>
+         <div class="row">
+            <table>
+               <tr>
+                  <td>Style</td>
+                  <td>Color</td>
+                  <td>Size</td>
+                  <td>Quantity</td>
+                  <td>Price</td>
+                  <td>Total</td>
+               </tr>
+               <% @cart.each do |c|
+                  
+                  shoe=Shoe.find c.sid
+                  color= Color.find c.colorid
+                  size= Size.find c.sizeid
+                      %>
+               <tr>
+                  <td> <%= image_tag shoe.image,  size: "80"%>
+                  <%= shoe.name  %></td>
+                  <td> <%= color.color  %></td>
+                  <td> <%= size.size %></td>
+                  <td> <%= c.quantity  %></td>
+                  <td> <%= shoe.price  %>$</td>
+                  <td>  <%= shoe.price*c.quantity %>$ </td>
+                  <td> <%= image_tag 'remove.png',  size: "16"%></td>
+               </tr>
+               <% end %>
+            </table>
+         </div>
+         <div class="checkout">
+            <a href="#">Checkout</a>
+         </div>
+         <% else %>
+         Your cart is currently empty.
+          <% end %>
+      </div>
+   </div>
+</section>
