@@ -1,48 +1,44 @@
 <%= form_for @signup do |f| %>
-<div>
-		
-		<%=@message%>
-	</div>
 
 
 	<div>
-		First Name <br />
+		<%= f.label :fname, "First Name" %><br />
 		<%= f.text_field :fname %>
 	</div>
 
 	<div>
-		Last Name<br />
-		<%= f.text_field :lname %>
+		<%= label_tag :lname, "Last Name" %><br />
+		<%= f.text_field :lname %><br />
 	</div>
 
 	<div>
-		Gender<br />
+		<br /><%= label_tag :gender, "Gender" %><br />
 		
 <%= f.radio_button(:gender, "M") %>
-<%= f.label(:gender_male, "Male") %>
+<%= f.label(:gender_male, "Male") %><br />
 <%= f.radio_button(:gender, "F") %>
-<%= f.label(:gender_female, "Female") %>
+<%= f.label(:gender_female, "Female") %><br />
 <%= f.radio_button(:gender, "U") %>
 <%= f.label(:gender_unassigned, "Prefer not to tell") %>
 	</div>
 
 
 
-<div>
-		Date of birth<br />
+<div><br />
+		<%= label_tag :dob, "Date of Birth" %><br />
 		<%= f.date_field(:dob) %>
 	</div>
 	<div>
-		Email<br />
+		<%= label_tag :email, "Email" %><br />
 		<%= f.text_field :email %>
 	</div>
 
 	<div>
-		Password <br />
+		<%= label_tag :gender, "Password" %> <br />
 		<%= f.password_field :password%>
 	</div>
 	<div>
-		Confirm Password<br />
+		<%= label_tag :password_confirmation, "Confirm Password" %><br />
 		<%= f.password_field :password_confirmation%>
 	</div>
 
