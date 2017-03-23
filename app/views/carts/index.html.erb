@@ -7,8 +7,8 @@
             </div>
          </div>
 
-        <% if session[:user_id] %>
-
+        <% if session[:user_id] || @cart.nil? %>
+             <% if  @cart.nil? %>
          <div class="row">
             <table>
                <tr>
@@ -33,7 +33,7 @@
                   <td> <%= c.quantity  %></td>
                   <td> <%= shoe.price  %>$</td>
                   <td>  <%= shoe.price*c.quantity %>$ </td>
-                  <td> <%= image_tag 'remove.png',  size: "16"%></td>
+                  <td> <%= link_to  image_tag('remove.png',size: "16"), c, data: {method: "delete"} %></td>
                </tr>
                <% end %>
             </table>
@@ -42,6 +42,9 @@
             <a href="#">Checkout</a>
          </div>
          <% else %>
+         Your cart is currently empty.
+          <% end %>
+          <% else %>
          Your cart is currently empty.
           <% end %>
       </div>
