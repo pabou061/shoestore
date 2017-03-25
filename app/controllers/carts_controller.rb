@@ -9,13 +9,25 @@ class CartsController < ApplicationController
 
   def create
     if session[:user_id]
-        cart= Cart.new(cart_params) 
-        if cart.save
-          flash[:notice] = "Successfully added to your cart"
+        cart = Cart.find_by_sql ["Select o.* 
+        from shoestore.orders o 
+        where o.cid=? and o.sid=? and o.sizeid=? and o.colorid=? and flag=1", session[:user_id],cart_params[:sid],cart_params[:sizeid],cart_params[:colorid] ]
 
+        if cart.empty? 
+            cart= Cart.new(cart_params) 
+            if cart.save
+              flash[:notice] = "Successfully added to your cart"
+
+            else
+              flash[:error] = "Please Make sure you checked everything"
+            end 
         else
-          flash[:error] = "Please Make sure you checked everything"
-        end 
+            cart.each do |c|
+                c.update(quantity: c.quantity + cart_params[:quantity].to_i)
+            end
+            flash[:notice] = "Successfully updated your cart"
+        end
+       
     else 
         flash[:error] = "You have to login to add to cart"
     end
