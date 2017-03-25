@@ -3,7 +3,8 @@ class CartsController < ApplicationController
 
 
   def index
-     @cart = Cart.where(cid: session[:user_id])
+    # todo: need to add flag to get cart where flag =1 cz 2 is old carts
+     @cart = Cart.where("cid=? and flag=1", session[:user_id])
   end
 
 
@@ -40,7 +41,7 @@ class CartsController < ApplicationController
 
   def destroy
     cart=Cart.find params[:id]
-    cart.destroy
+    cart.update :flag 2
     redirect_to carts_path
   end
 
