@@ -7,8 +7,8 @@
             </div>
          </div>
 
-        <% if session[:user_id] || @cart.nil? %>
-             <% if  @cart.nil? %>
+        <% if session[:user_id] %>
+             <% if  !@cart.empty? %>
          <div class="row">
             <table>
                <tr>
@@ -39,13 +39,13 @@
             </table>
          </div>
          <div class="checkout">
-            <a href="#">Checkout</a>
+            <%= link_to  "checkout", carts_checkout_path%>
          </div>
          <% else %>
          Your cart is currently empty.
           <% end %>
           <% else %>
-         Your cart is currently empty.
+         You need to sign in to view cart.
           <% end %>
       </div>
    </div>
