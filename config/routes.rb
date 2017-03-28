@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 	resources :signups, only: [:new,:create]
 	resources :carts, only: [:index,:create,:destroy]
 
+	get "/carts/checkout" => "carts#checkout"
+
 	resources :categories, only: [:show, :index] do
 		resources :subcategories do
 			resources :shoes
