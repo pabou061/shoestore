@@ -16,53 +16,55 @@ ActiveRecord::Schema.define(version: 0) do
   enable_extension "plpgsql"
 
   create_table "availablecolors", primary_key: ["colorid", "sid"], force: :cascade do |t|
-    t.integer "colorid", null: false
-    t.integer "sid",     null: false
+    t.serial "colorid", null: false
+    t.serial "sid",     null: false
   end
 
   create_table "availablesizes", primary_key: ["sizeid", "sid"], force: :cascade do |t|
-    t.integer "sizeid",   null: false
-    t.integer "sid",      null: false
+    t.serial  "sizeid",   null: false
+    t.serial  "sid",      null: false
     t.integer "quantity", null: false
   end
 
-  create_table "category", primary_key: "catid", id: :integer, force: :cascade do |t|
+  create_table "category", primary_key: "catid", force: :cascade do |t|
     t.string  "nom",   limit: 15,                null: false
     t.boolean "ismen",            default: true
     t.string  "image", limit: 50,                null: false
   end
 
-  create_table "client", primary_key: "cid", id: :integer, force: :cascade do |t|
-    t.string "fname",    limit: 30,               null: false
-    t.string "lname",    limit: 30,               null: false
-    t.string "email",    limit: 30,               null: false
-    t.string "password", limit: 30,               null: false
-    t.string "gender",              default: "U"
-    t.date   "dob",                               null: false
+  create_table "client", primary_key: "cid", force: :cascade do |t|
+    t.string "fname",           limit: 30,               null: false
+    t.string "lname",           limit: 30,               null: false
+    t.string "email",           limit: 30,               null: false
+    t.string "password_digest",                          null: false
+    t.string "gender",                     default: "U"
+    t.date   "dob"
     t.index ["email"], name: "client_email_key", unique: true, using: :btree
   end
 
-  create_table "colors", primary_key: "colorid", id: :integer, force: :cascade do |t|
+  create_table "colors", primary_key: "colorid", force: :cascade do |t|
     t.string "color", limit: 10, null: false
   end
 
-  create_table "orders", primary_key: ["sid", "cid", "dor", "hour"], force: :cascade do |t|
-    t.date    "dor",                 null: false
-    t.time    "hour",                null: false
-    t.integer "sid",                 null: false
-    t.integer "cid",                 null: false
-    t.integer "quantity",            null: false
-    t.string  "image",    limit: 50, null: false
+  create_table "orders", primary_key: "oid", force: :cascade do |t|
+    t.time     "hour"
+    t.integer  "sid",                               null: false
+    t.integer  "cid",                               null: false
+    t.integer  "quantity"
+    t.integer  "flag",                              null: false
+    t.integer  "colorid",                           null: false
+    t.integer  "sizeid",                            null: false
+    t.datetime "dor",      default: -> { "now()" }
   end
 
-  create_table "shoes", primary_key: "sid", id: :integer, force: :cascade do |t|
+  create_table "shoes", primary_key: "sid", force: :cascade do |t|
     t.string  "name",  limit: 30, null: false
     t.integer "price",            null: false
     t.string  "image", limit: 50, null: false
     t.integer "catid",            null: false
   end
 
-  create_table "sizes", primary_key: "sizeid", id: :integer, force: :cascade do |t|
+  create_table "sizes", primary_key: "sizeid", force: :cascade do |t|
     t.decimal "size", precision: 2, scale: 1, null: false
   end
 
@@ -70,6 +72,9 @@ ActiveRecord::Schema.define(version: 0) do
   add_foreign_key "availablecolors", "shoes", column: "sid", primary_key: "sid", name: "availablecolors_sid_fkey"
   add_foreign_key "availablesizes", "shoes", column: "sid", primary_key: "sid", name: "availablesizes_sid_fkey"
   add_foreign_key "availablesizes", "sizes", column: "sizeid", primary_key: "sizeid", name: "availablesizes_sizeid_fkey"
+  add_foreign_key "orders", "client", column: "cid", primary_key: "cid", name: "orders_cid_fkey"
+  add_foreign_key "orders", "colors", column: "colorid", primary_key: "colorid", name: "orders_colorid_fkey"
   add_foreign_key "orders", "shoes", column: "sid", primary_key: "sid", name: "orders_sid_fkey"
+  add_foreign_key "orders", "sizes", column: "sizeid", primary_key: "sizeid", name: "orders_sizeid_fkey"
   add_foreign_key "shoes", "category", column: "catid", primary_key: "catid", name: "shoes_catid_fkey"
 end
