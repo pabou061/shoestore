@@ -50,6 +50,7 @@ class CartsController < ApplicationController
     cart.each do |c|
       c.update flag: 2
     end 
+    UserNotifier.send_signup_email(@user).deliver
    @cart = Cart.where(cid: session[:user_id], flag:1)
   render "index"
   end
