@@ -11,20 +11,22 @@ end %>
         <%= @shoe.price %>$</p>
 
     <div class="buttons">
-        <p>colors</p>
+        <%= label_tag "Colors" %> <br />
 
         <% @availablecolor.each do |a|%>
         <%= f.radio_button :colorid, a.colorid%> <%=a.color%>
+        <img class="circle circle-color-select" data-bgcolor=<%=a.color%>> </img>
             <% end %>
             
 
     </div>
-
+<br />
     <div class="size">
-        <p>Size</p>
+       <%= label_tag "Sizes" %> <br />
        <% @available.each do |a|%>
             <%= f.radio_button :sizeid, a.sizeid, :data => {:quantity => a.quantity}, class: "shoesize" %><%=a.size%>
             <% end %>
+
             <div class="shoequantity">
             </div>
            
@@ -41,7 +43,7 @@ end %>
   <p class="error"><%= flash[:error] %></p>
 <% end -%>
 
-<%= submit_tag "Add to cart", class: "add_cart"%>
-<%= submit_tag "Buy now", class: "add_cart"%>
+<%= submit_tag "Add to cart"%> <%= submit_tag "Buy now"%>
+
 
 <% end %>

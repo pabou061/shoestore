@@ -75,11 +75,6 @@ section {
     height: 50px;
 }
 
-.add_cart {
-    border: solid 2px blue;
-    width: 100px;
-    height: 50px;
-}
 
 
 
@@ -786,12 +781,16 @@ padding-top: 50px; //(whatever distance from the top of the page you want)
     padding: 5px 20px 0 0;
 }
 
-input[type=text], input[type=password], input[type=email]{
-    width: 100%;
+input[type=text], input[type=password], input[type=email], .input-select{
+   
     padding: 12px 20px;
     margin: 8px 0;
     border: 2px solid grey;
     
+}
+
+input[type=text], input[type=password], input[type=email]{
+     width: 100%;
 }
 input[type=date]{
     width: 100%;
@@ -806,8 +805,11 @@ input[type=submit] {
     padding: 16px 32px;
     text-decoration: none;
     margin: 0px auto;
-    display: block;
+   
     cursor: pointer;
+}
+.login-submit {
+     display: block;
 }
 .form select {
     color: #000000;

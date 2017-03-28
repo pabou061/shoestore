@@ -75,7 +75,8 @@ $(function (){
     $(".shoesize").on("click",function(){
         $(".shoequantity").empty();
     console.log(this.dataset.quantity);
-    var select = $('<select name="cart[quantity]" id="cart_quantity"/>');
+    $(".shoequantity").append("</br><label> Quantity </label></br>");
+    var select = $('<select class="input-select" name="cart[quantity]" id="cart_quantity"/>');
 
     for (var i=0; i <= this.dataset.quantity; i++) { 
         select.append("<option value="+i+" >"+i+"</option");
