@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
 
-
+    require 'sendgrid-ruby'
+    include SendGrid
 
   def index
      @cart = Cart.where(cid: session[:user_id], flag:1)
@@ -47,12 +48,16 @@ class CartsController < ApplicationController
   def checkout
 
     cart = Cart.where(cid: session[:user_id], flag:1)
+
     cart.each do |c|
       c.update flag: 2
     end 
-    UserNotifier.send_signup_email(@user).deliver
+    
    @cart = Cart.where(cid: session[:user_id], flag:1)
   render "index"
   end
+
+
+
 
 end
