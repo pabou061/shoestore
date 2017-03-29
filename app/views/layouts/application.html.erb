@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     
     <title>
-        Shoe Store
+        The Shoe Store
     </title>
   </head>
 
@@ -24,14 +24,14 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class='shoe-logo'><%= image_tag 'men.jpg', class:"logo" %></a>
+               <%= link_to image_tag('tss_logo.png', class:"logo"), home_path, class: 'shoe-logo' %>
                 
             </div>
 
             <div class="collapse navbar-collapse menubar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><%= link_to "Home", home_path %></li>
-                    <li><%= link_to "Location", location_path %></li>
+                    <!-- <li><%= link_to "Location", location_path %></li> -->
                     <li>  <%= link_to "Shop", categories_path %></li>
                    
 <% if current_user %>
@@ -51,7 +51,7 @@
 
     <%= yield %>
 
-        <footer class="shoe-contact ">
+        <!-- <footer class="shoe-contact ">
         <div class="container">
             
             <div class="tittle">
@@ -73,7 +73,7 @@
             <div class="container">
                 <p class="pull-left">© Shoe Store All Rights Reserved</p>
             </div>
-    </footer>
+    </footer> -->
 
 
     <%= javascript_include_tag 'jquery.js','bootstrap.js','bootstrap.min.js' %>
