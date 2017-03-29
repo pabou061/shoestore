@@ -40,7 +40,6 @@
  <li><%= link_to "Cart("+ Cart.where(flag: 1,cid: session[:user_id]).count.to_s + ")", carts_path %></li>
  <li><%= link_to "Logout" , login_path(session[:user_id]), data: {method: "delete"}%></li>
 <% else %>
- <li><%= link_to "Cart", carts_path %></li>
    <li><%= link_to "Login", new_login_path %></li>
 <% end %>
 
