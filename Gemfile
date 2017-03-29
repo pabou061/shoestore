@@ -18,7 +18,6 @@ gem 'rspec'
 # use bcrypt and devise for user authentication
 gem 'bcrypt', platforms: :ruby
 gem 'devise'
-
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
