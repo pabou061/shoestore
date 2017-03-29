@@ -1,5 +1,25 @@
 
-// function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(45.46792193841881,-75.70054278413085),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(45.46792193841881,-75.70054278413085)});infowindow = new google.maps.InfoWindow({content:'<strong>Motel Ritz</strong><br>137 Boulevard Gréber, Gatineau<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+ function init_map() {
+    var myOptions = {
+        zoom: 15,
+        center: new google.maps.LatLng(45.46792193841881, -75.70054278413085),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+    marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(45.46792193841881, -75.70054278413085)
+    });
+    infowindow = new google.maps.InfoWindow({
+        content: '<strong>The Shoe Store</strong><br>137 Boulevard Gréber, Gatineau<br>'
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+    });
+    infowindow.open(map, marker);
+}
+google.maps.event.addDomListener(window, 'load', init_map);
+
 
 function overImage(a,b)
 	{
