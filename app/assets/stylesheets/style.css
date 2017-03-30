@@ -798,7 +798,7 @@ input[type=date]{
     margin: 8px 0;
     border: 2px solid grey;
 }
-input[type=submit] {
+input[type=submit], .checkout-btn {
     background-color: #555;
     border: none;
     color: white;
@@ -807,6 +807,9 @@ input[type=submit] {
     margin: 0px auto;
    
     cursor: pointer;
+}
+.checkout  {
+    margin: 45px;
 }
 .login-submit {
      display: block;

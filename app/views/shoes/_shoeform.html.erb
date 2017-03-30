@@ -15,7 +15,7 @@ end %>
 
         <% @availablecolor.each do |a|%>
         <%= f.radio_button :colorid, a.colorid,:required => true%> <%=a.color%>
-        <img class="circle circle-color-select" data-bgcolor=<%=a.color%>> </img>
+        <img class="circle circle-color-select" data-bgcolor=<%=a.color%>> </img><br />
             <% end %>
             
 
@@ -24,7 +24,7 @@ end %>
     <div class="size">
        <%= label_tag "Sizes" %> <br />
        <% @available.each do |a|%>
-            <%= f.radio_button :sizeid, a.sizeid, :data => {:quantity => a.quantity}, class: "shoesize",:required => true %><%=a.size%>
+            <%= f.radio_button :sizeid, a.sizeid, :data => {:quantity => a.quantity}, class: "shoesize",:required => true %><%=a.size%><br />
             <% end %>
 
             <div class="shoequantity">

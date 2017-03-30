@@ -154,6 +154,66 @@ INSERT INTO shoestore.availablesizes(
             sizeid, sid, quantity)
 VALUES (1, 4,  10);
 
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 5,  10);
+
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (2, 5,  10);
+
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (3, 5,  10);
+
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (2, 6,  10);
+
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (3, 6,  10);
+
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (2, 7,  10);
+
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (2, 8,  10);
+
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (2, 9,  10);
+
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 10,  10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1,11,  10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 12,  10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 13,  10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 14,  10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 15,  10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 16,  10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 17,  10);
+INSERT INTO shoestore.availablesizes(
+            sizeid, sid, quantity)
+VALUES (1, 18,  10);
+
 INSERT INTO shoestore.availablecolors(
             colorid, sid)
     VALUES (1, 2);
@@ -173,4 +233,150 @@ INSERT INTO shoestore.availablecolors(
 INSERT INTO shoestore.availablecolors(
             colorid, sid)
     VALUES (1, 5);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 6);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 7);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 8);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 10);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 11);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 12);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 13);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 14);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 15);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 16);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 17);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (1, 18);
+
+ 
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 1);
+
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 3);
+
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 4);
+
+INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 5);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 6);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 7);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 8);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 10);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 11);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 12);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 13);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 14);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 15);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 16);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 17);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (2, 18);
+
+INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 2);
+
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 1);
+
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 3);
+
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 4);
+
+INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 5);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 6);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 7);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 8);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 10);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 11);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 12);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 13);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 14);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 15);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 16);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 17);
+    INSERT INTO shoestore.availablecolors(
+            colorid, sid)
+    VALUES (3, 18);
+
 

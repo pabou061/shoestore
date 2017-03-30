@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS Orders (
 	SID INTEGER NOT NULL,
 	CID INTEGER NOT NULL,
 	quantity INTEGER,
-	glaf integer not null,
+	flag integer not null,
 	colorid INTEGER NOT NULL,
 	sizeid integer not null,
 	Dor timestamp default current_timestamp,
